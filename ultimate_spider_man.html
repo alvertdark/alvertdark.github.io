@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Spider-Man - Cyclo Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+
+<body class="font-[Poppins] bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <header class="bg-purple-600 dark:bg-purple-800 text-white fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://cdn-icons-png.flaticon.com/128/32/32964.png" alt="Cyclo Games Logo" class="h-8 w-8 mr-2 filter hue-rotate-90">
+                <a href="#" class="text-3xl font-bold text-white">Cyclo Games</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex space-x-4">
+                    <a href="#inicio" class="hover:text-purple-200">Inicio</a>
+                    <div class="relative group">
+                        <a href="#" class="hover:text-purple-200">Categorías</a>
+                        <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
+                            <div class="py-1">
+                                <a href="JuegosAccion.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Acción</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Guerra</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Carreras</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Shooter</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Anime</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Construcción</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Deportes</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Lucha</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Estrategia</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Multiplayer Online</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Mundo Abierto</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Supervivencia</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">Terror</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-700">VR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#juegos" class="hover:text-purple-200">Juegos</a>
+                    <a href="#sobre-nosotros" class="hover:text-purple-200">Sobre Nosotros</a>
+                    <a href="#contacto" class="hover:text-purple-200">Contacto</a>
+                </div>
+                <form class="relative">
+                    <input type="search" placeholder="Buscar juegos..." class="bg-purple-500 text-white placeholder-purple-200 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-300">
+                    <button type="submit" class="absolute right-0 top-0 mt-2 mr-3">
+                        <i class="fas fa-search text-purple-200"></i>
+                    </button>
+                </form>
+
+                <!-- Boton de Cambio de Tema -->
+                <button id="theme-toggle" class="p-2 rounded-full bg-purple-700 dark:bg-purple-500 flex items-center justify-center">
+                    <span class="material-icons text-white dark:hidden">light_mode</span>
+                    <span class="material-icons text-white hidden dark:inline">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-20 py-10 flex">
+        <div class="mx-8 w-3/4">
+            <div class="mt-16">
+                <h2 class="text-3xl font-bold mb-4">Ultimate Spider-Man</h2>
+                <p class="text-sm mb-4">Etiquetas: Acción, Aventura, Superhéroes</p>
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1725652915" alt="Portada de Ultimate Spider-Man" class="w-full max-w-3xl h-auto rounded shadow mb-4">
+
+                <h2 class="text-2xl font-semibold">Descripción</h2>
+                <p>Marvel's Spider-Man Remasterizado para PC ha sido desarrollado por Insomniac Games en colaboración con Marvel y optimizado para PC por Nixxes Software. El protagonista es un Peter Parker veterano que ha pulido sus habilidades en la lucha contra el crimen y los villanos en la Nueva York de Marvel. A su vez, también lucha por poner en orden su caótica vida personal y su carrera, con el destino de la ciudad en sus manos.</p>
+
+                <h2 class="text-2xl font-semibold mt-4">Ficha Técnica</h2>
+                <ul class="list-disc pl-5">
+                    <li>Desarrollador: Insomniac Games</li>
+                    <li>Género: Acción/Aventura</li>
+                    <li>Plataforma: PC</li>
+                    <li>Fecha de lanzamiento: Agosto 2022</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mt-4">Enlace de Descarga en Steam</h2>
+                <blockquote>
+                    <p style="text-align: center;">
+                        <iframe src="https://store.steampowered.com/widget/1817070/" width="646" height="190" frameborder="0"></iframe>
+                    </p>
+                </blockquote>
+                <p class="text-center">
+                    <a href="https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/?l=spanish" class="bg-blue-500 text-white px-4 py-2 rounded">Descargar Marvel’s Spider-Man Remastered</a>
+                </p>
+
+                <h2 class="text-2xl font-semibold mt-4">Paquetes de Expansión Incluidos</h2>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Paquete de trajes adicionales</li>
+                    <li>Expansión de misiones secundarias</li>
+                    <li>Contenido exclusivo de personajes</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mt-4">Tráiler</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jq_7fGb8ZDM" frameborder="0" allowfullscreen class="rounded shadow mb-4"></iframe>
+
+                <h2 class="text-2xl font-semibold mt-4">Capturas de Pantalla</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/ss_dfe778bf6d66e952e4acd4e1f926f7615b609ddf.116x65.jpg?t=1725652915" alt="Captura 1" class="w-full h-auto rounded shadow">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/ss_427677cf78195df94702f0a963cd9eaeb9d8935a.116x65.jpg?t=1725652915" alt="Captura 2" class="w-full h-auto rounded shadow">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/ss_dfba6f2477bfa42be69ddfdffbd421d3943d20bf.1920x1080.jpg?t=1725652915" alt="Captura 3" class="w-full h-auto rounded shadow">
+                </div>
+
+                <h2 class="text-2xl font-semibold mt-4">Requisitos del Sistema</h2>
+                <h3 class="font-semibold">Mínimos:</h3>
+                <ul class="list-disc pl-5">
+                    <li>SO: Windows 10 64-bit</li>
+                    <li>Procesador: Intel Core i3-4160, 3.6 GHz o AMD equivalente</li>
+                    <li>Memoria: 8 GB de RAM</li>
+                    <li>Gráficos: NVIDIA GTX 950 o AMD Radeon RX 470</li>
+                    <li>DirectX: Versión 12</li>
+                    <li>Almacenamiento: 75 GB de espacio disponible</li>
+                </ul>
+
+                <h3 class="font-semibold mt-2">Recomendados:</h3>
+                <ul class="list-disc pl-5">
+                    <li>SO: Windows 10 64-bit</li>
+                    <li>Procesador: Intel Core i5-4670, 3.4 GHz o AMD Ryzen 5 1600, 3.2 GHz</li>
+                    <li>Memoria: 16 GB de RAM</li>
+                    <li>Gráficos: NVIDIA GTX 1060 6GB o AMD Radeon RX 580 8GB</li>
+                    <li>DirectX: Versión 12</li>
+                    <li>Almacenamiento: 75 GB de espacio disponible</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mt-4">Instrucciones de Instalación</h2>
+                <ol class="list-decimal pl-5 mb-4">
+                    <li>Descargar el juego.</li>
+                    <li>Descomprimir CARPETA RAR.</li>
+                    <li>Montar el Archivo ISO con «Daemon Tools o similar».</li>
+                    <li>Ejecutar el SETUP.EXE e instalar.</li>
+                    <li>Ejecutar el juego como Administrador.</li>
+                    <li>¡Jugar! 🙂</li>
+                </ol>
+                <h3 class="font-semibold mt-2">Para Poner el Update:</h3>
+                <ol class="list-decimal pl-5 mb-4">
+                    <li>Descargar el archivo.</li>
+                    <li>Descomprimir.</li>
+                    <li>Ejecutar el SETUP.EXE e instalar en su juego base.</li>
+                    <li>Ejecutar el juego como administrador.</li>
+                    <li>¡Jugar! 🙂</li>
+                </ol>
+
+                <h2 class="text-2xl font-semibold mt-4">Enlaces de Descarga</h2>
+                <ul class="list-disc pl-5">
+                    <li><a href="link_de_descarga_de_mega" class="text-blue-500">Descargar desde Mega</a></li>
+                    <li><a href="link_de_descarga_de_mediafire" class="text-blue-500">Descargar desde Mediafire</a></li>
+                    <li><a href="link_de_descarga_de_qiwi" class="text-blue-500">Descargar desde Qiwi</a></li>
+                    <li><a href="link_de_descarga_de_torrent" class="text-blue-500">Descargar desde Torrent</a></li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mt-4">Comentarios</h2>
+                <div class="border-t mt-4 pt-4">
+                    <div class="mb-4">
+                        <p><strong>Usuario1:</strong> ¡Este juego es increíble! Me encanta la jugabilidad.</p>
+                    </div>
+                    <div class="mb-4">
+                        <p><strong>Usuario2:</strong> Las gráficas son impresionantes, ¡muy recomendable!</p>
+                    </div>
+                    <div class="mb-4">
+                        <p><strong>Usuario3:</strong> Tuve algunos problemas al instalar, pero al final funcionó bien.</p>
+                    </div>
+                    <textarea placeholder="Deja tu comentario aquí..." class="w-full p-2 border rounded mt-4"></textarea>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded mt-2">Enviar Comentario</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-4 w-1/4">
+            <h2 class="text-xl font-semibold mb-4">Anuncios y Noticias</h2>
+            <div class="bg-gray-200 p-4 rounded shadow mb-4">
+                <p>Aquí puedes agregar anuncios o noticias relevantes.</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded shadow mb-4">
+                <p>Ejemplo de anuncio o noticia.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="bg-purple-600 py-4">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-white-500 font-bold text-xl">Hecho por los Muchachones</p>
+            </div>
+        </div>
+        <div class="py-8">
+            <div class="container mx-auto px-6 text-center">
+                <p>&copy; 2023 Cyclo Games. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        function setTheme(isDark) {
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
+            setTheme(true);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = !html.classList.contains('dark');
+            setTheme(isDark);
+        });
+    </script>
+</body>
+</html> 
